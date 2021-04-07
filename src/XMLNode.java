@@ -71,7 +71,7 @@ public class XMLNode {
 
 	@Override
 	public String toString() {
-		String string = "XMLNode [tag=" + tag + ", textInside=" + textInside + ", openTag=" + openTag + ", closeTag=" + closeTag;
+		String string = "XMLNode [tag=" + tag + ", textInside=" + textInside + ", openTag=" + openTag + ", closeTag=" + closeTag +", PartOfList="+isPartOfList;
 	
 		if(parent != null) {
 			string = string + ", parent=" + parent.getTag() + "]";
