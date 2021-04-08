@@ -82,7 +82,6 @@ public class Start {
 		}
 		
 		br.close();
-		
 
 		String json = "";
 		int index = 0;
@@ -99,9 +98,12 @@ public class Start {
 			
 			if(xml.getParent() == null && xml.isPartOfList()) {
 				json=json+"{";
-				for (index = 0; index < stackXML.size(); index++) {
-					XMLNode xmlObject = stackXML.get(i);
-					json=json+xmlObject.getTag()+":"+xmlObject.getTextInside();
+				for (index = 0; index < 6; index++) {
+					XMLNode xmlObject = stackXML.get(index);
+					json=json+"'"+xmlObject.getTag()+"'"+":"+"'"+xmlObject.getTextInside()+"'";
+				}
+				for (index = 0; index < 6; index++) {
+					stackXML.remove(0);
 				}
 				json=json+"}";
 			}
