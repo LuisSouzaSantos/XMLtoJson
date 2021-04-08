@@ -101,6 +101,10 @@ public class Start {
 				for (index = 0; index < 6; index++) {
 					XMLNode xmlObject = stackXML.get(index);
 					json=json+"'"+xmlObject.getTag()+"'"+":"+"'"+xmlObject.getTextInside()+"'";
+					if(index < 5){
+						json=json+",";
+					}
+					
 				}
 				for (index = 0; index < 6; index++) {
 					stackXML.remove(0);
